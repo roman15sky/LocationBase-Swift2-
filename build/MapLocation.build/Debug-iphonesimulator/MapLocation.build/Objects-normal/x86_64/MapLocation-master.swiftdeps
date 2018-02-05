@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "89fe4143e11978814f766d08f7375acd"
+build_time: [525978340, 164363000]
+inputs:
+  "/Users/glory/Documents/MapLocation/MapLocation/ViewController.swift": [525978338, 0]
+  "/Users/glory/Documents/MapLocation/MapLocation/AppDelegate.swift": [525858536, 0]

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-5c-B0v">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JXe-Wl-QWN">
+                                <rect key="frame" x="20" y="546" width="560" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kks-vc-tDk">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="0.49633620689655172" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="2D Map"/>
+                                        <connections>
+                                            <action selector="overheadMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAI-aS-fcK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjs-5q-Bdm">
+                                        <rect key="frame" x="280" y="0.0" width="280" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="0.49633620690000002" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="3D Map"/>
+                                        <connections>
+                                            <action selector="flyoverMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="74e-Wu-Nul"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pqf-5c-B0v" secondAttribute="bottom" id="4mD-iw-u0N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JXe-Wl-QWN" secondAttribute="trailing" id="6Oe-lc-G8u"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pqf-5c-B0v" secondAttribute="trailing" constant="-20" id="9A9-k4-JQ0"/>
+                            <constraint firstItem="pqf-5c-B0v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="QhF-Eg-tQL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JXe-Wl-QWN" secondAttribute="bottom" constant="20" id="gY6-Tf-x3p"/>
+                            <constraint firstItem="JXe-Wl-QWN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="o2f-8k-qym"/>
+                            <constraint firstItem="pqf-5c-B0v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="uJO-rq-DeP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="pqf-5c-B0v" id="g1W-Dx-ghc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="435"/>
+        </scene>
+    </scenes>
+</document>
